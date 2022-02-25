@@ -23,3 +23,21 @@ public class Main {
     }
     
 }
+
+
+// Código main da caneta 2.0.
+
+package Projeto;
+
+public class Main {
+    
+    public static void main(String[] args) {
+       Classe c1 = new Classe("Bic", "Azul", 0.5f);
+        
+        c1.status();
+        
+        
+    }
+    
+}
+
