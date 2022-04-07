@@ -1,7 +1,4 @@
-package atividades;
-
 public class Triangulo {
-    public class Triangulo {
     
     private float a, b, c;
     
@@ -34,4 +31,4 @@ public class Triangulo {
     }
 
 }
-}
+
