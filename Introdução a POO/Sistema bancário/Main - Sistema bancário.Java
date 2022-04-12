@@ -31,3 +31,24 @@ public class Main {
     }
     
 }
+
+
+
+package atividades;
+
+public class Main {
+    
+    public static void main(String[] args) {
+     
+        Conta ally = new Conta();
+        Conta matias = new Conta();
+
+        ally.setNumero(1);
+        ally.setSaldo(10000000);
+        ally.setTitular("Alliquison");
+
+        System.out.println(ally.toString());
+        
+    }
+    
+}
