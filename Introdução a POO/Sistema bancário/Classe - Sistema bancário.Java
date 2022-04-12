@@ -174,3 +174,96 @@ public class Classe {
     
     
 }
+
+
+
+
+////////
+
+
+
+
+
+
+
+
+
+
+package atividade;
+
+public class Conta {
+    private int numero;
+    private String titular;
+    private double saldo;
+
+    public void Conta(int n, String t, double s){
+        this.numero = n;
+        this.titular = t;
+        this.saldo = s;
+    } 
+    
+    public int getNumero(){
+        return this.numero;
+    }
+    
+    public void setNumero(int n){
+        this.numero = n;
+    }
+
+    public void getTitular(){
+        return this.titular;
+    }
+    
+    public void setTitular(String t){
+        this.titular = t;
+    }
+    
+    public void getSaldo(){
+        return this.saldo;
+    }
+
+    public void setSaldo(double s){
+        this.saldo = s;
+    }
+
+    public String toString(){
+        return String.format("numero: %d, titular: %s, saldo: %.2f", numero, titular, saldo);
+    }
+
+// metodos 
+
+    public static boolean saca(double valor){
+        if(saldo >= valor && valor >= 0){
+            saldo -= valor;
+            return true;
+        }
+        return false;
+    }
+
+    public static boolean depositar(double valor){
+        if(valor < 0){
+            return false;
+        saldo += valor;
+        return true;
+
+    }
+
+    public boolean transfere(Conta d, double valor){
+        if(saca(valor)){
+            d.deposita(valor);
+            return true;
+        }
+        return false;
+    }
+
+// exemplo de status dos dados da conta
+
+    public void status(){
+        System.out.println("Numero da conta:" + this.getNumero());
+        System.out.println("Saldo: " + this.getSaldo());
+        System.out.println("O titula é: " + this.getTitular());
+
+    }
+
+
+
